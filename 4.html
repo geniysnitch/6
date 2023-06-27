@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Реєстрація користувача</title>
+
+</head>
+<body>
+    <h1>Реєстрація користувача</h1>
+    
+    <label for="firstName">Ім'я:</label>
+    <input type="text" id="firstName" required>
+    
+    <br>
+    
+    <label for="lastName">Прізвище:</label>
+    <input type="text" id="lastName" required>
+    
+    <br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    
+    <br>
+    
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" required>
+    
+    <br><br>
+    
+    <button onclick="registerUser()">Зареєструватися</button>
+</body>
+    <script>
+        function registerUser() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            
+            
+            
+            alert("Ви успішно зареєстровані!");
+        }
+    </script>
+</html>

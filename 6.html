@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Відправлення адреси електронної пошти</title>
+
+</head>
+<body>
+    <h1>Відправлення адреси електронної пошти</h1>
+    
+    <label for="recipientEmail">Email одержувача:</label>
+    <input type="email" id="recipientEmail" required>
+    
+    <br><br>
+    
+    <button onclick="sendEmail()">Відправити</button>
+</body>
+    <script>
+        function sendEmail() {
+            var recipientEmail = document.getElementById("recipientEmail").value;
+            
+            var mailtoLink = "mailto:" + recipientEmail;
+            window.location.href = mailtoLink;
+        }
+    </script>
+</html>

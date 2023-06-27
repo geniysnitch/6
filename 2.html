@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Тестування</title>
+
+</head>
+<body>
+    <h1>Тестування</h1>
+    
+    <label for="input1">Введіть значення 1:</label>
+    <input type="checkbox" id="input1">
+    
+    <br>
+    
+    <label for="input2">Введіть значення 2:</label>
+    <input type="checkbox" id="input2">
+    
+    <br><br>
+    
+    <button onclick="checkAnswer()">Перевірити</button>
+    
+    <p id="feedback"></p>
+</body>
+    <script>
+        function checkAnswer() {
+            var input1 = document.getElementById("input1").checked;
+            var input2 = document.getElementById("input2").checked;
+            
+            var correctAnswer = input1 && input2; // "І"
+            
+            var feedback = document.getElementById("feedback");
+            
+            if (correctAnswer) {
+                feedback.innerHTML = "Правильно!";
+                feedback.style.color = "green";
+            } else {
+                feedback.innerHTML = "Неправильно!";
+                feedback.style.color = "red";
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Тестування</title>
+
+</head>
+<body>
+    <h1>Тестування</h1>
+    
+    <p>Скільки буде 3 * 4?</p>
+    
+    <select id="answerSelect">
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="12">12</option>
+    </select>
+    
+    <br><br>
+    
+    <button onclick="checkAnswer()">Перевірити</button>
+    
+    <p id="feedback"></p>
+</body>
+    <script>
+        function checkAnswer() {
+            var select = document.getElementById("answerSelect");
+            var selectedOption = select.options[select.selectedIndex];
+            
+            var feedback = document.getElementById("feedback");
+            
+            if (selectedOption.value === "12") {
+                feedback.innerHTML = "Правильно!";
+                feedback.style.color = "green";
+            } else {
+                feedback.innerHTML = "Неправильно!";
+                feedback.style.color = "red";
+            }
+        }
+    </script>
+</html>
